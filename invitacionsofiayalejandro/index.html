@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Sofía & Alejandro — 19 de Septiembre, 2026</title>
+<meta name="description" content="Nos casamos. Acompáñanos a celebrar el 19 de septiembre de 2026 en San Luis Potosí.">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Styles -->
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Custom cursor / progress -->
+<div class="scroll-progress" aria-hidden="true"><div class="scroll-progress__bar" id="scrollBar"></div></div>
+
+<!-- Preloader -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <svg class="preloader__monogram" viewBox="0 0 120 120" width="72" height="72">
+    <text x="60" y="72" text-anchor="middle" class="preloader__text">S&amp;A</text>
+  </svg>
+</div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="#hero" class="nav__monogram">S&amp;A</a>
+  <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+  <ul class="nav__links" id="navLinks">
+    <li><a href="#historia" data-scroll>Nosotros</a></li>
+    <li><a href="#itinerario" data-scroll>Itinerario</a></li>
+    <li><a href="#galeria" data-scroll>Galería</a></li>
+    <li><a href="#ubicacion" data-scroll>Ubicación</a></li>
+    <li><a href="#rsvp" data-scroll class="nav__cta">Confirmar asistencia</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <header class="hero" id="hero">
+    <div class="hero__media">
+      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2000&auto=format&fit=crop" alt="" class="hero__img" id="heroImg">
+      <div class="hero__overlay"></div>
+    </div>
+
+    <svg class="branch branch--hero" data-branch viewBox="0 0 400 700" aria-hidden="true">
+      <use href="#bugambilia-branch"></use>
+    </svg>
+
+    <div class="hero__content">
+      <p class="eyebrow reveal-up" data-delay="0">Nos casamos</p>
+      <h1 class="hero__names">
+        <span class="reveal-up" data-delay="1">Sofía</span>
+        <span class="hero__amp reveal-up" data-delay="2">&amp;</span>
+        <span class="reveal-up" data-delay="3">Alejandro</span>
+      </h1>
+      <p class="hero__date reveal-up" data-delay="4">19 · Septiembre · 2026</p>
+      <p class="hero__place reveal-up" data-delay="5">San Luis Potosí, México</p>
+    </div>
+
+    <a href="#historia" class="hero__scroll" data-scroll aria-label="Desplázate">
+      <span class="hero__scroll-line"></span>
+      <span class="hero__scroll-text">Desplázate</span>
+    </a>
+  </header>
+
+  <!-- HISTORIA -->
+  <section class="story" id="historia">
+    <div class="story__grid">
+      <figure class="story__figure reveal-up">
+        <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=1400&auto=format&fit=crop" alt="Sofía y Alejandro tomados de la mano" loading="lazy">
+        <svg class="branch branch--story" data-branch viewBox="0 0 300 500" aria-hidden="true"><use href="#bugambilia-branch-small"></use></svg>
+      </figure>
+      <div class="story__copy">
+        <p class="eyebrow reveal-up">Nuestra historia</p>
+        <h2 class="story__title reveal-up">Un mismo camino,<br>dos huellas.</h2>
+        <p class="story__text reveal-up">Nos conocimos sin planearlo y, desde entonces, cada paso ha tenido la misma dirección. Hoy queremos convertir ese camino en promesa, rodeados de las personas que también forman parte de nuestra historia.</p>
+        <p class="story__text reveal-up">Con el corazón abierto y mucha alegría, los invitamos a celebrar con nosotros el inicio de esta nueva etapa.</p>
+        <p class="story__signature reveal-up">Sofía &amp; Alejandro</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COUNTDOWN -->
+  <section class="countdown" id="countdown">
+    <svg class="branch branch--countdown" data-branch viewBox="0 0 400 300" aria-hidden="true"><use href="#bugambilia-branch-wide"></use></svg>
+    <p class="eyebrow eyebrow--light reveal-up">Faltan</p>
+    <h2 class="countdown__title reveal-up">Para decir «sí»</h2>
+    <div class="countdown__grid" id="countdown-grid" role="timer" aria-live="off">
+      <div class="countdown__unit">
+        <span class="countdown__value" id="cd-days">00</span>
+        <span class="countdown__label">Días</span>
+      </div>
+      <div class="countdown__divider" aria-hidden="true"></div>
+      <div class="countdown__unit">
+        <span class="countdown__value" id="cd-hours">00</span>
+        <span class="countdown__label">Horas</span>
+      </div>
+      <div class="countdown__divider" aria-hidden="true"></div>
+      <div class="countdown__unit">
+        <span class="countdown__value" id="cd-mins">00</span>
+        <span class="countdown__label">Minutos</span>
+      </div>
+      <div class="countdown__divider" aria-hidden="true"></div>
+      <div class="countdown__unit">
+        <span class="countdown__value" id="cd-secs">00</span>
+        <span class="countdown__label">Segundos</span>
+      </div>
+    </div>
+    <p class="countdown__sub reveal-up">Sábado, 19 de septiembre de 2026 · San Luis Potosí</p>
+  </section>
+
+  <!-- ITINERARIO -->
+  <section class="itinerary" id="itinerario">
+    <p class="eyebrow reveal-up">Itinerario</p>
+    <h2 class="section-title reveal-up">Cómo celebraremos el día</h2>
+
+    <div class="itinerary__cards">
+      <article class="itinerary__card reveal-up">
+        <span class="itinerary__time">4:00 <small>PM</small></span>
+        <h3 class="itinerary__name">Ceremonia religiosa</h3>
+        <p class="itinerary__venue">Iglesia San Juan Bautista</p>
+        <p class="itinerary__desc">Misa a las 17:00 horas. Los esperamos con puntualidad para acompañarnos en este primer paso.</p>
+      </article>
+
+      <article class="itinerary__card itinerary__card--accent reveal-up">
+        <span class="itinerary__time">7:00 <small>PM</small></span>
+        <h3 class="itinerary__name">Recepción</h3>
+        <p class="itinerary__venue">Salón Bugambilias</p>
+        <p class="itinerary__desc">Cena, brindis y baile bajo las bugambilias. La fiesta comienza a las 19:00 horas.</p>
+      </article>
+    </div>
+
+    <ol class="timeline reveal-up">
+      <li class="timeline__item">
+        <span class="timeline__dot" aria-hidden="true"></span>
+        <span class="timeline__time">17:00</span>
+        <span class="timeline__label">Misa</span>
+      </li>
+      <li class="timeline__item">
+        <span class="timeline__dot" aria-hidden="true"></span>
+        <span class="timeline__time">19:00</span>
+        <span class="timeline__label">Recepción</span>
+      </li>
+    </ol>
+  </section>
+
+  <!-- GALERÍA -->
+  <section class="gallery" id="galeria">
+    <p class="eyebrow reveal-up">Galería</p>
+    <h2 class="section-title reveal-up">Momentos que nos trajeron aquí</h2>
+
+    <div class="masonry" id="masonry">
+      <button class="masonry__item reveal-up" data-full="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1600&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=800&auto=format&fit=crop" alt="Detalle de ramo de novia" loading="lazy">
+      </button>
+      <button class="masonry__item masonry__item--tall reveal-up" data-full="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=1600&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=800&auto=format&fit=crop" alt="Pareja caminando al atardecer" loading="lazy">
+      </button>
+      <button class="masonry__item reveal-up" data-full="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=1600&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=800&auto=format&fit=crop" alt="Anillos de compromiso" loading="lazy">
+      </button>
+      <button class="masonry__item masonry__item--wide reveal-up" data-full="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1600&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=800&auto=format&fit=crop" alt="Mesa de recepción decorada" loading="lazy">
+      </button>
+      <button class="masonry__item reveal-up" data-full="https://images.unsplash.com/photo-1550005809-91ad75fb315f?q=80&w=1600&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1550005809-91ad75fb315f?q=80&w=800&auto=format&fit=crop" alt="Pareja abrazándose" loading="lazy">
+      </button>
+      <button class="masonry__item masonry__item--tall reveal-up" data-full="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?q=80&w=1600&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?q=80&w=800&auto=format&fit=crop" alt="Bugambilias moradas" loading="lazy">
+      </button>
+      <button class="masonry__item reveal-up" data-full="https://images.unsplash.com/photo-1546032996-6dfacbacbf3f?q=80&w=1600&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1546032996-6dfacbacbf3f?q=80&w=800&auto=format&fit=crop" alt="Copas para el brindis" loading="lazy">
+      </button>
+    </div>
+  </section>
+
+  <!-- UBICACIÓN -->
+  <section class="location" id="ubicacion">
+    <svg class="branch branch--location" data-branch viewBox="0 0 300 500" aria-hidden="true"><use href="#bugambilia-branch-small"></use></svg>
+    <p class="eyebrow reveal-up">Ubicación</p>
+    <h2 class="section-title reveal-up">Los esperamos aquí</h2>
+
+    <div class="location__grid">
+      <div class="location__card reveal-up">
+        <h3>Ceremonia</h3>
+        <p class="location__venue">Iglesia San Juan Bautista</p>
+        <p class="location__time">4:00 PM</p>
+      </div>
+      <div class="location__card location__card--accent reveal-up">
+        <h3>Recepción</h3>
+        <p class="location__venue">Salón Bugambilias</p>
+        <p class="location__time">7:00 PM</p>
+      </div>
+    </div>
+
+    <div class="location__map reveal-up">
+      <iframe
+        title="Mapa de ubicación del evento"
+        src="https://maps.google.com/maps?q=Carretera%20Tamazunchale%20-%20San%20Mart%C3%ADn%2C%20San%20Luis%20Potos%C3%AD%2C%20M%C3%A9xico&t=&z=12&ie=UTF8&iwloc=&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+    <p class="location__address reveal-up">Carretera Tamazunchale – San Martín, San Luis Potosí, México</p>
+  </section>
+
+  <!-- RSVP -->
+  <section class="rsvp" id="rsvp">
+    <div class="rsvp__inner">
+      <p class="eyebrow eyebrow--light reveal-up">Confirmación</p>
+      <h2 class="rsvp__title reveal-up">Acompáñanos</h2>
+      <p class="rsvp__sub reveal-up">Confirma tu asistencia antes del 15 de agosto de 2026.</p>
+
+      <form class="rsvp__form reveal-up" id="rsvpForm" novalidate>
+        <div class="field">
+          <label for="name">Nombre completo</label>
+          <input type="text" id="name" name="name" autocomplete="name" placeholder="Tu nombre">
+          <span class="field__error" id="err-name"></span>
+        </div>
+
+        <div class="field">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" autocomplete="email" placeholder="tucorreo@ejemplo.com">
+          <span class="field__error" id="err-email"></span>
+        </div>
+
+        <div class="field">
+          <label for="guests">Número de acompañantes</label>
+          <select id="guests" name="guests">
+            <option value="">Selecciona una opción</option>
+            <option value="0">Solo yo</option>
+            <option value="1">1 acompañante</option>
+            <option value="2">2 acompañantes</option>
+            <option value="3">3 acompañantes</option>
+          </select>
+          <span class="field__error" id="err-guests"></span>
+        </div>
+
+        <fieldset class="field field--radio">
+          <legend>¿Asistirás?</legend>
+          <div class="radio-group">
+            <label class="radio"><input type="radio" name="attendance" value="si"><span>Con alegría, ahí estaré</span></label>
+            <label class="radio"><input type="radio" name="attendance" value="no"><span>No podré asistir</span></label>
+          </div>
+          <span class="field__error" id="err-attendance"></span>
+        </fieldset>
+
+        <div class="field">
+          <label for="message">Mensaje para los novios <em>(opcional)</em></label>
+          <textarea id="message" name="message" rows="3" placeholder="Escribe unas palabras..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn--primary">
+          <span>Confirmar asistencia</span>
+        </button>
+
+        <p class="rsvp__success" id="rsvpSuccess" role="status" aria-live="polite">
+          Gracias — tu confirmación fue recibida. ¡Nos vemos pronto!
+        </p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <svg class="footer__monogram" viewBox="0 0 200 200" width="64" height="64" aria-hidden="true">
+    <circle cx="100" cy="100" r="98" fill="none" stroke="currentColor" stroke-width="1"></circle>
+    <text x="100" y="118" text-anchor="middle" class="footer__monogram-text">S &amp; A</text>
+  </svg>
+  <p class="footer__names">Sofía &amp; Alejandro</p>
+  <p class="footer__date">19 · 09 · 2026</p>
+  <p class="footer__note">Con todo nuestro cariño, gracias por ser parte de este día.</p>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox__close" id="lightboxClose" aria-label="Cerrar">&times;</button>
+  <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Anterior">&#8249;</button>
+  <img src="" alt="" class="lightbox__img" id="lightboxImg">
+  <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Siguiente">&#8250;</button>
+</div>
+
+<!-- SVG SPRITE: bugambilia line-art branches (signature motif) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="bugambilia-branch">
+      <path class="branch-stem" d="M20,690 C60,600 40,520 90,460 C140,400 110,320 160,260 C200,210 180,140 220,60" fill="none" stroke="currentColor" stroke-width="2"/>
+      <g class="branch-leaves">
+        <path d="M90,460 C70,440 55,445 45,465 C60,470 78,472 90,460Z"/>
+        <path d="M160,260 C140,245 128,252 122,272 C138,275 152,275 160,260Z"/>
+        <path d="M220,60 C205,45 192,50 186,68 C202,72 214,72 220,60Z"/>
+        <path d="M140,400 C160,388 168,395 168,412 C154,414 144,410 140,400Z"/>
+      </g>
+      <g class="branch-flowers">
+        <ellipse cx="95" cy="440" rx="10" ry="16" transform="rotate(20 95 440)"/>
+        <ellipse cx="80" cy="452" rx="9" ry="14" transform="rotate(-15 80 452)"/>
+        <ellipse cx="165" cy="238" rx="9" ry="14" transform="rotate(25 165 238)"/>
+        <ellipse cx="150" cy="248" rx="8" ry="13" transform="rotate(-10 150 248)"/>
+        <ellipse cx="226" cy="40" rx="8" ry="13" transform="rotate(15 226 40)"/>
+        <ellipse cx="210" cy="50" rx="7" ry="12" transform="rotate(-20 210 50)"/>
+        <circle cx="98" cy="446" r="2.5" class="branch-flower-center"/>
+        <circle cx="168" cy="244" r="2.5" class="branch-flower-center"/>
+        <circle cx="228" cy="46" r="2.5" class="branch-flower-center"/>
+      </g>
+    </g>
+
+    <g id="bugambilia-branch-small">
+      <path class="branch-stem" d="M10,480 C40,420 30,360 65,310 C95,265 80,210 110,160" fill="none" stroke="currentColor" stroke-width="2"/>
+      <g class="branch-leaves">
+        <path d="M65,310 C50,296 40,300 34,316 C46,320 58,320 65,310Z"/>
+        <path d="M110,160 C98,148 88,152 84,166 C96,170 106,168 110,160Z"/>
+      </g>
+      <g class="branch-flowers">
+        <ellipse cx="70" cy="295" rx="8" ry="13" transform="rotate(20 70 295)"/>
+        <ellipse cx="58" cy="304" rx="7" ry="11" transform="rotate(-15 58 304)"/>
+        <ellipse cx="114" cy="145" rx="7" ry="11" transform="rotate(18 114 145)"/>
+        <circle cx="72" cy="300" r="2" class="branch-flower-center"/>
+        <circle cx="116" cy="150" r="2" class="branch-flower-center"/>
+      </g>
+    </g>
+
+    <g id="bugambilia-branch-wide">
+      <path class="branch-stem" d="M10,150 C80,120 140,180 210,140 C270,105 330,150 390,110" fill="none" stroke="currentColor" stroke-width="2"/>
+      <g class="branch-leaves">
+        <path d="M140,180 C138,160 150,152 168,158 C160,172 150,180 140,180Z"/>
+        <path d="M330,150 C328,130 340,122 358,128 C350,142 340,150 330,150Z"/>
+      </g>
+      <g class="branch-flowers">
+        <ellipse cx="205" cy="145" rx="8" ry="13" transform="rotate(-10 205 145)"/>
+        <ellipse cx="220" cy="135" rx="7" ry="11" transform="rotate(20 220 135)"/>
+        <ellipse cx="385" cy="115" rx="7" ry="11" transform="rotate(-15 385 115)"/>
+        <circle cx="210" cy="140" r="2" class="branch-flower-center"/>
+        <circle cx="388" cy="120" r="2" class="branch-flower-center"/>
+      </g>
+    </g>
+  </defs>
+</svg>
+
+<!-- GSAP CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+<script src="script.js"></script>
+</body>
+</html>
