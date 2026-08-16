@@ -1,0 +1,9 @@
+Coloca aqui tu archivo de cancion con el nombre exacto:
+
+cancion.mp3
+
+El boton "Reproducir musica" de la invitacion buscara automaticamente
+este archivo en esta carpeta. Si usas otro nombre o formato,
+edita esta linea dentro de index.html:
+
+<source src="musica/cancion.mp3" type="audio/mpeg">

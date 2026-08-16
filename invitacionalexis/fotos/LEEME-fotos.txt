@@ -1,0 +1,36 @@
+Esta invitacion se entrego con toda la informacion FICTICIA (nombre,
+fecha, padres, padrinos, telefono, etc.) y sin fotos reales, ya que
+aun no las compartiste. Ahora mismo el "hero" (foto grande de arriba)
+y la galeria usan una ilustracion/placeholders de bicicleta para que
+la invitacion se vea completa y funcional.
+
+Cuando tengas las fotos reales de Alexis, sigue estos pasos dentro de
+index.html:
+
+1) FOTO PRINCIPAL (hero):
+   Busca el comentario "EDITAR: cuando tengas una foto real de Alexis..."
+   cerca del inicio de la seccion <section class="hero">. Borra el
+   bloque <svg class="hero-photo-slot">...</svg> y en su lugar coloca:
+
+   <img class="hero-photo-slot" src="fotos/hero.jpg" alt="Alexis">
+
+   Guarda tu foto en esta carpeta con el nombre exacto: hero.jpg
+
+2) GALERIA (7 fotos):
+   Busca el comentario "EDITAR: coloca tus fotos en la carpeta fotos..."
+   en la seccion <section class="gallery">. Cada casilla vacia
+   (<div class="g-slot reveal">...) debe reemplazarse por:
+
+   <div class="g-slot g-filled reveal"><img src="fotos/galeria-1.jpg" alt="Alexis"></div>
+
+   Usa galeria-1.jpg hasta galeria-7.jpg (la tercera casilla es la
+   ancha/doble, ideal para una foto horizontal).
+
+3) IMAGEN PARA COMPARTIR EN WHATSAPP/REDES (og-image.jpg):
+   Ya incluimos un placeholder en fotos/og-image.jpg (1200x630px).
+   Puedes sustituirlo por una foto real o un diseño propio del mismo
+   tamano para que se vea mejor la vista previa al compartir el link.
+
+4) Actualiza tambien las URLs "og:url" y "og:image" dentro del <head>
+   de index.html una vez que publiques la invitacion en tu hosting
+   definitivo (por ejemplo, tu dominio o el de tu proveedor).
