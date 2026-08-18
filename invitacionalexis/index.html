@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>Mis XV Años · Alexis</title>
-<meta name="description" content="Acompáñame a celebrar mis XV años. 11 de septiembre de 2026, Tamazunchale, S.L.P.">
+<meta name="description" content="Acompáñame a celebrar mis XV años. 11 de septiembre de 2026, San Felipe Orizatlán, Hidalgo">
 
 <!-- ===== Open Graph / vista previa para WhatsApp, Facebook, etc. =====
      NOTA: actualiza estas URLs absolutas cuando publiques la invitación en tu propio dominio/hosting. -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Mis XV Años · Alexis">
-<meta property="og:description" content="Acompáñame a celebrar mis XV años. 11 de septiembre de 2026, Tamazunchale, S.L.P.">
+<meta property="og:description" content="Acompáñame a celebrar mis XV años. 11 de septiembre de 2026, San Felipe Orizatlán, Hidalgo">
 <meta property="og:image" content="fotos/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -20,7 +20,7 @@
 <!-- Twitter Card (por si se comparte ahí también) -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mis XV Años · Alexis">
-<meta name="twitter:description" content="Acompáñame a celebrar mis XV años. 11 de septiembre de 2026, Tamazunchale, S.L.P.">
+<meta name="twitter:description" content="Acompáñame a celebrar mis XV años. 11 de septiembre de 2026, San Felipe Orizatlán, Hidalgo">
 <meta name="twitter:image" content="fotos/og-image.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -148,11 +148,11 @@
     z-index:1;
     pointer-events:none;
     background:linear-gradient(180deg,
-      rgba(207,226,245,0) 0%,
-      rgba(207,226,245,0) 38%,
-      rgba(79,134,198,0.55) 62%,
-      rgba(46,95,145,0.88) 82%,
-      var(--rose-deep) 100%);
+      rgba(10,20,35,0) 0%,
+      rgba(10,20,35,0) 34%,
+      rgba(14,28,46,0.42) 58%,
+      rgba(13,26,42,0.72) 78%,
+      rgba(10,22,36,0.92) 100%);
   }
 
   .hero-flowers{
@@ -631,6 +631,104 @@
     line-height:1.6;
   }
 
+  /* ---------- confirmar asistencia (RSVP, ahora dentro del footer) ---------- */
+  .rsvp-note{
+    font-size:0.82rem;
+    color:var(--ink-soft);
+    max-width:300px;
+    margin:0 auto 1.8rem;
+    line-height:1.6;
+  }
+  .rsvp-card{
+    max-width:320px;
+    margin:0 auto;
+    background:#fff;
+    border-radius:20px;
+    padding:2.1rem 1.5rem 2.2rem;
+    box-shadow:var(--shadow);
+    text-align:left;
+  }
+  .rsvp-field{ margin-bottom:1.3rem; }
+  .rsvp-field label{
+    display:block;
+    font-size:0.66rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    font-weight:500;
+    color:var(--wine);
+    margin-bottom:0.5rem;
+  }
+  .rsvp-field label .opt{
+    text-transform:none;
+    font-weight:400;
+    font-style:italic;
+    letter-spacing:0;
+    color:var(--ink-soft);
+    margin-left:0.25rem;
+  }
+  .rsvp-field input[type="text"],
+  .rsvp-field input[type="email"],
+  .rsvp-field select,
+  .rsvp-field textarea{
+    width:100%;
+    padding:0.75rem 0.9rem;
+    border-radius:10px;
+    border:1px solid var(--blush-deep);
+    background:var(--cream);
+    font-family:'Jost', sans-serif;
+    font-weight:300;
+    font-size:0.85rem;
+    color:var(--ink);
+    outline:none;
+    transition:border-color 0.2s ease;
+  }
+  .rsvp-field input:focus,
+  .rsvp-field select:focus,
+  .rsvp-field textarea:focus{ border-color:var(--rose); }
+  .rsvp-field textarea{ resize:vertical; min-height:88px; }
+  .rsvp-attend{
+    border:1px solid var(--blush-deep);
+    border-radius:12px;
+    padding:0.4rem 1rem 0.6rem;
+    margin:0 0 1.5rem;
+  }
+  .rsvp-attend legend{
+    padding:0 0.5rem;
+    font-size:0.66rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    font-weight:500;
+    color:var(--wine);
+  }
+  .rsvp-option{
+    display:flex;
+    align-items:center;
+    gap:0.6rem;
+    padding:0.55rem 0.1rem;
+    font-size:0.82rem;
+    color:var(--ink);
+    cursor:pointer;
+  }
+  .rsvp-option input{
+    accent-color:var(--rose);
+    width:16px; height:16px;
+    flex:0 0 auto;
+  }
+  .rsvp-submit-btn{
+    display:block;
+    width:100%;
+    border:none;
+    margin-top:0.4rem;
+  }
+  .rsvp-status{
+    text-align:center;
+    font-size:0.72rem;
+    color:var(--rose-deep);
+    margin-top:0.9rem;
+    min-height:1em;
+    line-height:1.5;
+  }
+
   /* ---------- footer / rsvp ---------- */
   footer{
     background:linear-gradient(170deg, var(--wine), #0F2438);
@@ -649,6 +747,27 @@
     max-width:280px;
     margin:0 auto 1.8rem;
     line-height:1.7;
+  }
+  .footer-rsvp-title{
+    position:relative;
+    color:var(--gold);
+    /* margin-top:2.6rem;
+    padding-top:2.6rem; */
+  }
+  /* .footer-rsvp-title::before{
+    content:'';
+    position:absolute;
+    top:0; left:50%;
+    transform:translateX(-50%);
+    width:52px; height:1px;
+    background:rgba(255,255,255,0.25);
+  } */
+  footer .rsvp-note{
+    color:rgba(255,255,255,0.75);
+  }
+  footer .rsvp-field label,
+  footer .rsvp-attend legend{
+    color:var(--wine);
   }
   .signoff{
     margin-top:2.4rem;
@@ -814,56 +933,7 @@
 
   <!-- ================= HERO ================= -->
   <section class="hero" id="inicio">
-    <!-- EDITAR: cuando tengas una foto real de Alexis, reemplaza el bloque <svg class="hero-photo-slot"> de abajo por: -->
-         <img class="hero-photo-slot" src="fotos/hero.jpg" alt="Alexis">
-    <<img class="hero-photo-slot" src="/invitacionalexis/fotos/XV_ALexis-08447.jpg" alt="Alexis" viewBox="0 0 400 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#BFE0F5"/>
-          <stop offset="55%" stop-color="#E8F4FC"/>
-          <stop offset="100%" stop-color="#CFE7F7"/>
-        </linearGradient>
-      </defs>
-      <rect x="0" y="0" width="400" height="700" fill="url(#skyGrad)"/>
-      <circle cx="90" cy="120" r="46" fill="#fff" opacity="0.55"/>
-      <circle cx="150" cy="100" r="34" fill="#fff" opacity="0.45"/>
-      <circle cx="310" cy="170" r="30" fill="#fff" opacity="0.4"/>
-      <!-- carretera -->
-      <rect x="0" y="560" width="400" height="140" fill="#2E5F91" opacity="0.18"/>
-      <g stroke="#2E5F91" stroke-width="6" opacity="0.35" stroke-dasharray="22 18">
-        <line x1="0" y1="610" x2="400" y2="610"/>
-      </g>
-      <!-- bicicleta -->
-      <g transform="translate(75,430)" stroke="#16324F" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="40" cy="150" r="62" opacity="0.9"/>
-        <circle cx="210" cy="150" r="62" opacity="0.9"/>
-        <circle cx="40" cy="150" r="8" fill="#16324F"/>
-        <circle cx="210" cy="150" r="8" fill="#16324F"/>
-        <g stroke-width="2.4" opacity="0.55">
-          <line x1="40" y1="150" x2="40" y2="92"/>
-          <line x1="40" y1="150" x2="88" y2="121"/>
-          <line x1="40" y1="150" x2="88" y2="179"/>
-          <line x1="40" y1="150" x2="40" y2="208"/>
-          <line x1="40" y1="150" x2="-8" y2="179"/>
-          <line x1="40" y1="150" x2="-8" y2="121"/>
-          <line x1="210" y1="150" x2="210" y2="92"/>
-          <line x1="210" y1="150" x2="258" y2="121"/>
-          <line x1="210" y1="150" x2="258" y2="179"/>
-          <line x1="210" y1="150" x2="210" y2="208"/>
-          <line x1="210" y1="150" x2="162" y2="179"/>
-          <line x1="210" y1="150" x2="162" y2="121"/>
-        </g>
-        <path d="M40 150 L118 150 L155 60 L210 150"/>
-        <path d="M118 150 L100 40"/>
-        <path d="M100 40 L128 40"/>
-        <path d="M155 60 L138 40"/>
-        <line x1="138" y1="40" x2="162" y2="34"/>
-      </g>
-      <g opacity="0.5" stroke="#4F86C6" stroke-width="4" fill="none" stroke-linecap="round">
-        <path d="M40 470 Q10 460 -10 480"/>
-        <path d="M30 490 Q0 484 -20 500"/>
-      </g>
-    </svg>
+    <img class="hero-photo-slot" src="fotos/hero.jpg" alt="Alexis Sánchez Austria">
     <div class="hero-gradient"></div>
 
     <svg class="hero-flowers" viewBox="0 0 170 150" xmlns="http://www.w3.org/2000/svg">
@@ -894,7 +964,7 @@
       <div class="play-label reveal" id="playLabel">Reproducir música</div>
 
       <h1 class="hero-name script reveal">Alexis</h1>
-      <div class="hero-sub reveal">Torres Medina</div>
+      <div class="hero-sub reveal">Sánchez Austria</div>
 
       <div class="scroll-cue reveal">
         <span>Desliza</span>
@@ -978,9 +1048,9 @@
   <!-- ================= BENDICIÓN ================= -->
   <section class="blessing">
     <p class="lead reveal">Con la bendición de Dios<br>y de mis padres</p>
-    <p class="names reveal">Blanca Estela Medina Ríos<br>Alberto Torres Guzmán</p>
-    <p class="lead reveal">Acompañado de mis padrinos</p>
-    <p class="names reveal">Leticia Torres Guzmán<br>Roberto Sánchez Delgado</p>
+    <p class="names reveal">Yaneli Austria Flores<br>Alexis Sánchez González</p>
+    <p class="lead reveal">Acompañado de mi madrina</p>
+    <p class="names reveal">Dra. Gloria Vargas Sánchez</p>
     <div class="divider-branch reveal">
       <svg class="branch gold" viewBox="0 0 140 60">
         <path d="M5 30 Q40 50 70 30 T135 30" stroke-dasharray="4 5"/>
@@ -999,11 +1069,11 @@
     <div class="loc-card reveal">
       <svg class="loc-icon" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.3"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg>
       <div class="loc-kicker">Recepción</div>
-      <div class="loc-name">Salón Bugambilias</div>
-      <div class="loc-addr">Carretera San Martín, Tamazunchale, S.L.P.</div>
-      <div class="loc-time">7:00 PM</div>
+      <div class="loc-name">Casino Orizatlense</div>
+      <div class="loc-addr">San Felipe Orizatlán, Hidalgo</div>
+      <div class="loc-time">6:00 PM</div>
       <a class="btn btn-light" target="_blank" rel="noopener"
-         href="https://www.google.com/maps/search/?api=1&query=Salón+Bugambilias+Carretera+San+Martín+Tamazunchale">Ver ubicación</a>
+         href="https://maps.app.goo.gl/GgNpgLKM7u7HAMi28">Ver ubicación</a>
     </div>
   </section>
 
@@ -1013,7 +1083,7 @@
     <div class="timeline">
 
       <div class="t-item reveal">
-        <div class="t-time-block"><div class="t-time">7:00 PM</div><div class="t-label">Recepción</div></div>
+        <div class="t-time-block"><div class="t-time">6:00 PM</div><div class="t-label">Recepción</div></div>
         <div class="t-icon-block"><div class="t-dot"></div></div>
         <div class="t-desc-block"></div>
       </div>
@@ -1021,11 +1091,11 @@
       <div class="t-item reveal">
         <div class="t-desc-block"></div>
         <div class="t-icon-block"><div class="t-dot"></div></div>
-        <div class="t-time-block" style="text-align:left"><div class="t-time">7:15 PM</div><div class="t-label">Coctelería</div></div>
+        <div class="t-time-block" style="text-align:left"><div class="t-time">6:30 PM</div><div class="t-label">Comida</div></div>
       </div>
 
       <div class="t-item reveal">
-        <div class="t-time-block"><div class="t-time">7:30 PM</div><div class="t-label">Entrada del quinceañero</div></div>
+        <div class="t-time-block"><div class="t-time">7:00 PM</div><div class="t-label">Presentación del quinceañero<br>(recorrido con papás)</div></div>
         <div class="t-icon-block"><div class="t-dot"></div></div>
         <div class="t-desc-block"></div>
       </div>
@@ -1033,11 +1103,11 @@
       <div class="t-item reveal">
         <div class="t-desc-block"></div>
         <div class="t-icon-block"><div class="t-dot"></div></div>
-        <div class="t-time-block" style="text-align:left"><div class="t-time">8:15 PM</div><div class="t-label">Brindis</div></div>
+        <div class="t-time-block" style="text-align:left"><div class="t-time">7:30 PM</div><div class="t-label">Brindis</div></div>
       </div>
 
       <div class="t-item reveal">
-        <div class="t-time-block"><div class="t-time">8:30 PM</div><div class="t-label">Cena</div></div>
+        <div class="t-time-block"><div class="t-time">8:00 PM</div><div class="t-label">Vals y video</div></div>
         <div class="t-icon-block"><div class="t-dot"></div></div>
         <div class="t-desc-block"></div>
       </div>
@@ -1045,7 +1115,25 @@
       <div class="t-item reveal">
         <div class="t-desc-block"></div>
         <div class="t-icon-block"><div class="t-dot"></div></div>
-        <div class="t-time-block" style="text-align:left"><div class="t-time">9:30 PM</div><div class="t-label">Se abre la pista de baile</div></div>
+        <div class="t-time-block" style="text-align:left"><div class="t-time">8:20 PM</div><div class="t-label">Regalo sorpresa</div></div>
+      </div>
+
+      <div class="t-item reveal">
+        <div class="t-time-block"><div class="t-time">8:30 PM</div><div class="t-label">Último carrito</div></div>
+        <div class="t-icon-block"><div class="t-dot"></div></div>
+        <div class="t-desc-block"></div>
+      </div>
+
+      <div class="t-item reveal">
+        <div class="t-desc-block"></div>
+        <div class="t-icon-block"><div class="t-dot"></div></div>
+        <div class="t-time-block" style="text-align:left"><div class="t-time">8:40 PM</div><div class="t-label">Coronación y cambio de zapatos</div></div>
+      </div>
+
+      <div class="t-item reveal">
+        <div class="t-time-block"><div class="t-time">8:50 PM</div><div class="t-label">Disco (sorpresa)</div></div>
+        <div class="t-icon-block"><div class="t-dot"></div></div>
+        <div class="t-desc-block"></div>
       </div>
 
     </div>
@@ -1055,7 +1143,7 @@
   <!-- ================= CÓDIGO DE VESTIMENTA ================= -->
   <section class="dress">
     <div class="section-title reveal">Código de vestimenta</div>
-    <div class="dress-tag reveal">Formal</div>
+    <div class="dress-tag reveal">Colores claros</div>
     <div class="dress-figures reveal">
       <!-- traje -->
       <svg viewBox="0 0 60 130" fill="none" stroke="#16324F" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round">
@@ -1078,28 +1166,23 @@
         <path d="M25 24c1.6 3 3.4 4.6 5 4.6s3.4-1.6 5-4.6" stroke-width="1.1"/>
       </svg>
     </div>
-    <p class="dress-note reveal">Te invitamos a vestir de manera elegante para acompañarnos en esta celebración tan especial.</p>
+    <p class="dress-note reveal">Te invitamos a vestir en colores claros, como beige o blanco, para acompañarnos en esta celebración tan especial.</p>
 
     <div class="dress-warning reveal">
       <span class="dress-swatch"></span>
-      <p>El color <strong>azul</strong> está reservado para el quinceañero. Te pedimos evitarlo en tu vestimenta.</p>
+      <p>El color <strong>azul</strong> está reservado para el quinceañero y las damas. Te pedimos evitarlo en tu vestimenta.</p>
     </div>
   </section>
 
   <!-- ================= GALERÍA ================= -->
   <section class="gallery">
     <div class="section-title reveal">Galería de fotos</div>
-    <!-- EDITAR: coloca tus fotos en la carpeta "fotos" (galeria-1.jpg ... galeria-7.jpg) y
-         reemplaza cada bloque .g-slot de abajo por, por ejemplo:
-         <div class="g-slot g-filled reveal"><img src="fotos/galeria-1.jpg" alt="Alexis"></div> -->
     <div class="g-grid">
-      <div class="g-slot reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="3.4"/><circle cx="18" cy="17" r="3.4"/><path d="M6 17l6-9 3 4"/><path d="M9.5 8h3"/></svg><span>Foto pendiente</span></div>
-      <div class="g-slot reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="3.4"/><circle cx="18" cy="17" r="3.4"/><path d="M6 17l6-9 3 4"/><path d="M9.5 8h3"/></svg><span>Foto pendiente</span></div>
-      <div class="g-slot g-wide reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="3.4"/><circle cx="18" cy="17" r="3.4"/><path d="M6 17l6-9 3 4"/><path d="M9.5 8h3"/></svg><span>Foto pendiente</span></div>
-      <div class="g-slot reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="3.4"/><circle cx="18" cy="17" r="3.4"/><path d="M6 17l6-9 3 4"/><path d="M9.5 8h3"/></svg><span>Foto pendiente</span></div>
-      <div class="g-slot reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="3.4"/><circle cx="18" cy="17" r="3.4"/><path d="M6 17l6-9 3 4"/><path d="M9.5 8h3"/></svg><span>Foto pendiente</span></div>
-      <div class="g-slot reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="3.4"/><circle cx="18" cy="17" r="3.4"/><path d="M6 17l6-9 3 4"/><path d="M9.5 8h3"/></svg><span>Foto pendiente</span></div>
-      <div class="g-slot reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="3.4"/><circle cx="18" cy="17" r="3.4"/><path d="M6 17l6-9 3 4"/><path d="M9.5 8h3"/></svg><span>Foto pendiente</span></div>
+      <div class="g-slot g-filled reveal"><img src="fotos/galeria-1.jpg" alt="Alexis Sánchez Austria" loading="lazy"></div>
+      <div class="g-slot g-filled reveal"><img src="fotos/galeria-2.jpg" alt="Alexis Sánchez Austria" loading="lazy"></div>
+      <div class="g-slot g-filled g-wide reveal"><img src="fotos/galeria-3.jpg" alt="Alexis Sánchez Austria" loading="lazy"></div>
+      <div class="g-slot g-filled reveal"><img src="fotos/galeria-4.jpg" alt="Alexis Sánchez Austria" loading="lazy"></div>
+      <div class="g-slot g-filled reveal"><img src="fotos/galeria-5.jpg" alt="Alexis Sánchez Austria" loading="lazy"></div>
     </div>
   </section>
 
@@ -1114,13 +1197,53 @@
     </div> -->
   </section>
 
-  <!-- ================= FOOTER ================= -->
-  <footer>
-    <div class="script">Gracias por ser parte<br>de este día</div>
-    <p>Con todo mi cariño te espero para celebrar juntos mis XV años.</p>
-    <a class="btn btn-rose" target="_blank" rel="noopener"
-       href="https://wa.me/524831183199?text=Confirmo%20mi%20asistencia%20a%20los%20XV%20a%C3%B1os%20de%20Alexis">Confirmar asistencia</a>
-    <div class="signoff">Alexis Torres Medina · 11 de septiembre de 2026</div>
+  <!-- ================= FOOTER + CONFIRMAR ASISTENCIA (RSVP) ================= -->
+  <footer id="rsvp">
+    <!-- <div class="script">Gracias por ser parte<br>de este día</div>
+    <p>Con todo mi cariño te espero para celebrar juntos mis XV años.</p> -->
+
+    <div class="section-title footer-rsvp-title reveal">Confirma tu asistencia</div>
+    <p class="rsvp-note reveal">Por favor confirma antes del 28 de agosto para poder organizar todo con cariño.</p>
+
+    <form class="rsvp-card reveal" id="rsvpForm" novalidate>
+      <div class="rsvp-field">
+        <label for="rsvpName">Nombre completo</label>
+        <input type="text" id="rsvpName" name="rsvpName" placeholder="Tu nombre" required>
+      </div>
+
+      <div class="rsvp-field">
+        <label for="rsvpEmail">Correo electrónico <span class="opt">(opcional)</span></label>
+        <input type="email" id="rsvpEmail" name="rsvpEmail" placeholder="tucorreo@ejemplo.com">
+      </div>
+
+      <div class="rsvp-field">
+        <label for="rsvpGuests">Número de acompañantes</label>
+        <select id="rsvpGuests" name="rsvpGuests">
+          <option value="Solo yo">Solo yo</option>
+          <option value="1 acompañante">1 acompañante</option>
+          <option value="2 acompañantes">2 acompañantes</option>
+          <option value="3 acompañantes">3 acompañantes</option>
+          <option value="4 acompañantes">4 acompañantes</option>
+          <option value="5 acompañantes">5 acompañantes</option>
+        </select>
+      </div>
+
+      <fieldset class="rsvp-attend">
+        <legend>¿Asistirás?</legend>
+        <label class="rsvp-option"><input type="radio" name="rsvpAttend" value="Con alegría, ahí estaré" required> Con alegría, ahí estaré</label>
+        <label class="rsvp-option"><input type="radio" name="rsvpAttend" value="No podré asistir"> No podré asistir</label>
+      </fieldset>
+
+      <div class="rsvp-field">
+        <label for="rsvpMsg">Mensaje para Alexis <span class="opt">(opcional)</span></label>
+        <textarea id="rsvpMsg" name="rsvpMsg" placeholder="Escribe unas palabras..."></textarea>
+      </div>
+
+      <button type="button" class="btn btn-rose rsvp-submit-btn" id="footerRsvpBtn">Confirmar asistencia</button>
+      <div class="rsvp-status" id="rsvpStatus"></div>
+    </form>
+
+    <div class="signoff">Alexis Sánchez Austria · 11 de septiembre de 2026</div>
   </footer>
 
   <a href="https://oyesonrie.com" target="_blank" rel="noopener" class="credit-badge" id="creditBadge">
@@ -1168,7 +1291,7 @@
   introOverlay.addEventListener('click', ()=> openInvite(true));
 
   // ---------- Countdown ----------
-  const targetDate = new Date("2026-09-11T19:00:00-06:00").getTime();
+  const targetDate = new Date("2026-09-11T18:00:00-06:00").getTime();
 
   function updateCountdown(){
     const now = new Date().getTime();
@@ -1236,6 +1359,52 @@
       playLabel.textContent = 'Reproducir música';
       isPlaying = false;
     }
+  });
+
+  // ---------- Formulario de confirmación de asistencia (envía por WhatsApp) ----------
+  const rsvpForm = document.getElementById('rsvpForm');
+  const rsvpStatus = document.getElementById('rsvpStatus');
+  const footerRsvpBtn = document.getElementById('footerRsvpBtn');
+  const RSVP_WHATSAPP_NUMBER = '527713420952';
+
+  function sendRsvp(){
+    const name = document.getElementById('rsvpName').value.trim();
+    const email = document.getElementById('rsvpEmail').value.trim();
+    const guestsSelect = document.getElementById('rsvpGuests');
+    const guestsText = guestsSelect.value;
+    const attendEl = document.querySelector('input[name="rsvpAttend"]:checked');
+    const msg = document.getElementById('rsvpMsg').value.trim();
+
+    if(!name || !attendEl){
+      rsvpStatus.textContent = 'Por favor completa tu nombre y confirma si asistirás en el formulario de arriba.';
+      document.getElementById('rsvp').scrollIntoView({ behavior:'smooth', block:'start' });
+      return;
+    }
+
+    const lines = [
+      'Confirmo mi asistencia a los XV años de Alexis',
+      `Nombre: ${name}`,
+      `Asistencia: ${attendEl.value}`
+    ];
+    if(attendEl.value !== 'No podré asistir'){
+      lines.push(`Acompañantes: ${guestsText}`);
+    }
+    if(email) lines.push(`Correo: ${email}`);
+    if(msg) lines.push(`Mensaje: ${msg}`);
+
+    const waUrl = `https://wa.me/${RSVP_WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join('\n'))}`;
+
+    rsvpStatus.textContent = 'Abriendo WhatsApp para enviar tu confirmación...';
+    window.open(waUrl, '_blank', 'noopener');
+  }
+
+  // Botón único en el footer
+  footerRsvpBtn.addEventListener('click', sendRsvp);
+
+  // Respaldo: si alguien presiona Enter dentro del formulario, funciona igual (sin botón duplicado)
+  rsvpForm.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    sendRsvp();
   });
 </script>
 
